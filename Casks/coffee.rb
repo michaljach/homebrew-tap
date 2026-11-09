@@ -30,10 +30,12 @@ cask "coffee" do
   end
 
   uninstall quit:   "com.michaljach.coffee",
+            # Re-enable sleep via the passwordless sudoers rule. Not `sudo: true`: Homebrew runs
+            # `sudo -E`, which the NOPASSWD rule (no SETENV) refuses for this exact command.
             script: {
-              executable: "/usr/bin/pmset",
-              args:       ["-a", "disablesleep", "0"],
-              sudo:       true,
+              executable:   "/usr/bin/sudo",
+              args:         ["-n", "/usr/bin/pmset", "-a", "disablesleep", "0"],
+              must_succeed: false,
             },
             delete: "/etc/sudoers.d/coffee"
 end
