@@ -7,6 +7,8 @@ cask "coffee" do
   desc "Menu bar toggle to prevent sleep, even with the lid closed"
   homepage "https://github.com/michaljach/coffee"
 
+  license "MIT"
+
   depends_on macos: :monterey
 
   app "Coffee.app"
