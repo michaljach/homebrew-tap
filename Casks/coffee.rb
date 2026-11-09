@@ -1,6 +1,6 @@
 cask "coffee" do
-  version "1.0.0"
-  sha256 "84570e2127b75b03f80f6e97edbcd9b00ae9703f46a223f66d9dd0e3aee6fed6"
+  version "1.1.0"
+  sha256 "30f255fbd7386d070da779bbe18cb18f5f5700d2c1687f2f18fca9ae6307cbba"
 
   url "https://github.com/michaljach/coffee/releases/download/v#{version}/Coffee-#{version}.zip"
   name "Coffee"
