@@ -4,7 +4,7 @@ Homebrew formulae and casks for my tools.
 
 ```sh
 brew install michaljach/tap/mtop
-brew install --cask michaljach/tap/coffee
+brew trust --cask michaljach/tap/coffee && brew install --cask michaljach/tap/coffee
 ```
 
 | Name | Description |
